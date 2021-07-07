@@ -5,9 +5,9 @@ mostrar el resulto por medio de "ALERT"*/
 function sumar()
 {
 	// variables que voy a usar
-	let num1;
-	let num2;
-	let resultado;
+	var num1;
+	var num2;
+	var resultado;
    
 	/* UNA MANERA
 	//traigo los datos del imput del html para guardalso en la variable osea lo que se escribe en el cuadro de texto
@@ -28,9 +28,6 @@ function sumar()
 	
 	// con later muestro en ventana ermergente el resultado de la suma 
 	alert("La suma es " + resultado);
-
-
-
 
 
 

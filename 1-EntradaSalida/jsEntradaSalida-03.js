@@ -7,7 +7,7 @@ function mostrar()
 	nombreIngresado=txtIdNombre.value;
 	alert("ok");*/
 
-    let nombre;
+    var nombre;
 	
 	nombre = document.getElementById("txtIdNombre").value;          //estaandar de js
 	

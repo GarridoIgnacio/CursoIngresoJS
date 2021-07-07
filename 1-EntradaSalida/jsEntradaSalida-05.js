@@ -5,8 +5,8 @@ function mostrar()
 {	
 	//alert("ok");
     
-	let nombre;
-    let edad;
+	var nombre;
+    var edad;
 	
 	nombre = document.getElementById("txtIdNombre").value;
 	edad = document.getElementById("txtIdEdad").value;
