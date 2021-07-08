@@ -11,11 +11,18 @@ function SacarResto()
 	var divisor;
 	var resto;
 
-	dividendo = parseInt(document.getElementById("txtIdNumeroDividendo").value);
-	divisor = parseInt(document.getElementById("txtIdNumeroDivisor").value);
+	/*dividendo = parseInt(document.getElementById("txtIdNumeroDividendo").value);
+	divisor = parseInt(document.getElementById("txtIdNumeroDivisor").value);*/
+
+	dividendo = txtIdNumeroDividendo.value;
+	dividendo = parseInt(dividendo);
+
+	divisor = txtIdNumeroDivisor.value;
+	divisor = parseInt(divisor);
+	
 	resto = dividendo % divisor; 
 	
-	alert("El resto es "+resto);
+	alert("El resto es " + resto);
 
 
 }
