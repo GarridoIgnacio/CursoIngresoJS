@@ -1,4 +1,6 @@
-/*
+/* Nombro: Ignacio
+  Apellido: Garrido
+  e-mail: nacho.gdo@gmail.com
 Debemos lograr tomar Los numeros por ID ,
 transformarlos a enteros (parseInt) y Sumarlos.
 mostrar el resulto por medio de "ALERT"*/
@@ -28,9 +30,6 @@ function sumar()
 	
 	// con later muestro en ventana ermergente el resultado de la suma 
 	alert("La suma es " + resultado);
-
-
-
 
 }
 

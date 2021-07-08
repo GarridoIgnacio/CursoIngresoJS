@@ -1,9 +1,10 @@
-/*
+/*Nombro: Ignacio
+  Apellido: Garrido
+  e-mail: nacho.gdo@gmail.com
 Debemos lograr tomar nombre y edad por ID y mostrarlos concatenados 
 ej.: "Usted se llama José y tiene 66 años" 	*/
 function mostrar()
 {	
-	//alert("ok");
     
 	var nombre;
     var edad;
@@ -15,11 +16,8 @@ function mostrar()
 	
 	alert(`USted se llama ${nombre} y tiene ${edad} años`);
 
-    /*son dos varintas para el mismo resiltado para para lograr el `` totar 
+    /*son dos varintes para el mismo resultado para para lograr el `` totar 
 	   La tecla " AltGr " y la tecla de corchetes */
-
-
-
 
 }
 

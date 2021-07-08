@@ -1,4 +1,6 @@
-/*
+/*  Nombro: Ignacio
+  Apellido: Garrido
+  e-mail: nacho.gdo@gmail.com
 Debemos lograr tomar el importe por ID ,
 transformarlo a entero (parseInt), luego
 mostrar el importe con un aumento del 10 %
