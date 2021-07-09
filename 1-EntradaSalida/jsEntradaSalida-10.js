@@ -10,15 +10,19 @@ function mostrarAumento()
 	var importe;
   var porcentaje;
   var resutado;
+  var calculo;
+    
 
   importe = document.getElementById("txtIdImporte").value;
   importe = parseInt(importe);
+
+  porcentaje = prompt("Ingrese el porcentaje")
   
-  porcentaje = (importe / 100)*25;
+  calculo = (importe / 100)*porcentaje;
 
-  resutado = importe - porcentaje;
+  resutado = importe - calculo;
 
-  txtIdResultado.value = resutado;
+  document.getElementById("txtIdResultado").value = resutado;
   
 
 }

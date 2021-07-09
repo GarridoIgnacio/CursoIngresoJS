@@ -7,11 +7,11 @@ mostrar el resulto por medio de "ALERT"*/
 function sumar()
 {
 	// variables que voy a usar
-	var num1;
-	var num2;
+	var NuemroUno;
+	var NumeroDos;
 	var resultado;
    
-	// UNA MANERA
+	/* UNA MANERA
 	//traigo los datos del imput del html para guardalso en la variable osea lo que se escribe en el cuadro de texto
 	num1 = document.getElementById("txtIdNumeroUno").value;
     num2 = document.getElementById("txtIdNumeroDos").value;
@@ -23,13 +23,28 @@ function sumar()
 	// OTRA forma es..
 
     /*num1 = parseInt(document.getElementById("txtIdNumeroUno").value);
-    num2 = parseInt(document.getElementById("txtIdNumeroDos").value);*/
+    num2 = parseInt(document.getElementById("txtIdNumeroDos").value);
 	
 	// sumo las dos variables ahora numericas y guardo en el resulato en la variable resultado
 	resultado = num1 + num2;
 	
-	// con later muestro en ventana ermergente el resultado de la suma 
-	alert("La suma es " + resultado);
+	// con alter muestro en ventana ermergente el resultado de la suma 
+	alert("La suma es " + resultado);*/
+
+	// Froma Correcta y Ordenada del codigo.
+
+    NuemroUno = document.getElementById("txtIdNumeroUno").value;
+	NuemroUno = parseInt(NuemroUno);
+	
+	NumeroDos = document.getElementById("txtIdNumeroDos").value;
+	NumeroDos = parseInt(NumeroDos);
+
+	resultado = NuemroUno+ NumeroDos;
+
+	mensaje = "la suma es: "+resultado;
+
+	alert(mensaje);
+
 
 }
 

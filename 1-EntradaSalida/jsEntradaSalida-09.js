@@ -9,17 +9,20 @@ function mostrarAumento()
 {
     var sueldo;
 	var resultado;
-    var porcentaje;
+    var Calculo;
+	var porcentaje;
 
 	/*sueldo = parseInt(document.getElementById("txtIdSueldo").value);*/
 
 	sueldo = txtIdSueldo.value;
 	sueldo = parseInt(sueldo);
 	
-	porcentaje = (sueldo / 100)*10;
+    porcentaje = prompt("Ingrese el porsebtaje")
 	
-	resultado = sueldo + porcentaje;
+	Calculo = (sueldo / 100)*porcentaje;
+	
+	resultado = sueldo + Calculo;
 
-	document.getElementById("txtIdResultado").value = resultado;
+	txtIdResultado.value = resultado;
 	
 }
