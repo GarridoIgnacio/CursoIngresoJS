@@ -1,8 +1,15 @@
-/*1.	Para el departamento de facturación:
+/*  Nombro: Ignacio
+  Apellido: Garrido
+  Divivición: G
+  e-mail: nacho.gdo@gmail.com
+
+
+1.	Para el departamento de facturación:
 A.	Ingresar tres precios de productos y mostrar la suma de los mismos.
 B.	Ingresar tres precios de productos y mostrar el promedio de los mismos.
 C.	ingresar tres precios de productos  y mostrar precio final (más IVA 21%).
 */
+
 function Sumar () 
 {
 
@@ -74,9 +81,7 @@ function PrecioFinal ()
     PrecioTres = parseInt(PrecioTres);
 
     suma = PrecioUno + PrecioDos + PrecioTres;
-
     IVA = (suma * 21)/100;
-
     resultado = suma + IVA;
 
     mensaje = "El total más IVA es: "+resultado;

@@ -1,6 +1,11 @@
-/*
+/*  Nombro: Ignacio
+  Apellido: Garrido
+  Divivición: G
+  e-mail: nacho.gdo@gmail.com
+
 Al presionar el  botón, 
 se debe mostrar un mensaje como el siguiente "Esto funciona de maravilla"*/
+
 function mostrar()
 {
 	var mensajeBienvenida; //crear mi variable

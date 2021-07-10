@@ -1,5 +1,6 @@
 /*Nombro: Ignacio
   Apellido: Garrido
+  Divivición: G
   e-mail: nacho.gdo@gmail.com
 Debemos lograr tomar nombre y edad por ID y mostrarlos concatenados 
 ej.: "Usted se llama José y tiene 66 años" 	*/

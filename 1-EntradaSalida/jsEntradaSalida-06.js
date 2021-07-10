@@ -1,5 +1,6 @@
 /* Nombro: Ignacio
   Apellido: Garrido
+  Divivición: G
   e-mail: nacho.gdo@gmail.com
 Debemos lograr tomar Los numeros por ID ,
 transformarlos a enteros (parseInt) y Sumarlos.

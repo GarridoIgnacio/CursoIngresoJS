@@ -1,5 +1,6 @@
 /*  Nombro: Ignacio
   Apellido: Garrido
+  Divivición: G
   e-mail: nacho.gdo@gmail.com
 Debemos lograr tomar el importe por ID.
 Transformarlo a entero (parseInt), luego
@@ -12,17 +13,17 @@ function mostrarAumento()
   var resutado;
   var calculo;
     
-
   importe = document.getElementById("txtIdImporte").value;
-  importe = parseInt(importe);
+  importe = parseFloat(importe);
 
-  porcentaje = prompt("Ingrese el porcentaje")
+  porcentaje = prompt("Ingrese el porcentaje");
   
-  calculo = (importe / 100)*porcentaje;
-
+  calculo = importe * porcentaje/100;
   resutado = importe - calculo;
 
-  document.getElementById("txtIdResultado").value = resutado;
-  
+  mensaje = importe + " con " + porcentaje + "% de descueento es: "+ resutado;
+
+  document.getElementById("txtIdResultado").value = mensaje;
+
 
 }
