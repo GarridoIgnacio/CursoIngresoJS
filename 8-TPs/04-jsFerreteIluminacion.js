@@ -15,71 +15,290 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	var CantidadLamp;   
-    var PrecioTotal;
-    var Porcentaje;
-    var Descuento;
-    var CalculoProcentaje;
-    var Fabricante;
-    var Aumento;
+ 
+    var cantidadLampara;
+    var precio;
+    var precioFinal;
+    var porcentaje;
+    var fabricante;
+    var precioPorCantidad;
+    var calculoIIBB;
+    var mensaje;
 
-    Porcentaje = 0;
-    CantidadLamp = document.getElementById("txtIdCantidad").value;
-    CantidadLamp = parseInt(CantidadLamp);
-    Fabricante = document.getElementById("Marca").value;
-
-    PrecioTotal = CantidadLamp * 35;
-
-    if(CantidadLamp > 5) //A
+    cantidadLampara = document.getElementById("txtIdCantidad").value;
+    cantidadLampara = parseInt(cantidadLampara);
+    fabricante = document.getElementById("Marca").value;
+    
+    porcentaje = 0;
+    precio = 35;
+    precioPorCantidad = cantidadLampara * precio;
+   
+    switch(cantidadLampara)
     {
-        Porcentaje = 50;   
+        case 1:
+        case 2:
+            porcentaje = 0
+        break;
+        case 3:
+            if(fabricante=="ArgentinaLuz")
+            {
+                porcentaje=15;
+            }
+            else
+            {
+                if(fabricante=="FelipeLamparas")
+                {
+                    porcentaje=10;
+                }
+                else
+                {
+                    porcentaje=5;
+                }
+            }
+        break;
+        case 4:
+            if(fabricante =="ArgentinaLuz" || fabricante == "FelipeLamparas") 
+            {
+                porcentaje=25;
+            }
+            else
+            {
+                porcentaje=20;
+            }
+        break;
+        case 5:
+            if(fabricante=="ArgentinaLuz")
+            {
+                porcentaje=40;
+            }
+            else
+            {
+                porcentaje=30;
+            }
+        break;
+        default:
+            porcentaje=50;
+        break;
+    }
+    precioFinal = precioPorCantidad - precioPorCantidad * porcentaje /100;
+    
+    if(precioFinal > 119)
+    {
+        calculoIIBB = precioFinal * 10 /100;
+        precioFinal = precioFinal + calculoIIBB;
+        
+        mensaje = "Usted pago 10% de IIBB, siendo: $"+calculoIIBB+" el impuesto agregado al precio final";
+        alert(mensaje);
+    
+    }
+
+    document.getElementById("txtIdprecioDescuento").value = precioFinal; 
+
+
+   /* if(cantidadLampara == 3)                                                        
+    {
+        switch(fabricante)
+        {
+            case "ArgentinaLuz":
+                porcentaje = 15;
+            break;
+            case "FelipeLamparas":
+                porcentaje = 10;
+            break;
+            default:
+                porcentaje = 5 ;
+            break;
+        }
+    }
+    else
+    {
+        if(cantidadLampara == 4)
+        {
+            switch(fabricante)
+            {
+                case "ArgentinaLuz":
+                case "FelipeLamparas":
+                    porcentaje = 25;
+                break;
+                default:
+                    porcentaje = 20;
+                break;
+            }
+        }
+        else
+        {   
+            if(cantidadLampara == 5)
+            {
+                switch(fabricante)
+                {
+                    case "ArgentinaLuz":
+                        porcentaje = 40;
+                    break;
+                    default:
+                        porcentaje = 30;
+                     break;
+                }
+            }
+            else
+            {
+                if(cantidadLampara >= 6)
+                {
+                    porcentaje = 50;
+                }
+                
+            }       
+        }
+    }
+    
+    precioFinal = precioPorCantidad - precioPorCantidad * porcentaje /100;
+    
+    if(precioFinal > 119)
+    {
+        calculoIIBB = precioFinal * 10 /100;
+        precioFinal = precioFinal + calculoIIBB;
+        
+        mensaje = "Usted pago 10% de IIBB, siendo: $"+calculoIIBB+" el impuesto agregado al precio final";
+        alert(mensaje);
+    
+    }
+
+    document.getElementById("txtIdprecioDescuento").value = precioFinal; */
+
+ 
+}
+
+
+	/*
+    var cantidadLampara;   
+    var precioTotal;
+    var porcentaje;
+    var descuento;
+    var calculoProcentaje;
+    var fabricante;
+
+    porcentaje = 0;
+    cantidadLampara = document.getElementById("txtIdCantidad").value;
+    cantidadLampara = parseInt(cantidadLampara);
+    fabricante = document.getElementById("Marca").value;
+
+   switch(cantidadLampara) 
+        {
+            case 1:
+            case 2:
+                porcentaje = 0;
+            break;
+            case 3:
+                switch(fabricante)
+                {
+                    case "ArgentinaLuz":
+                        porcentaje = 15;
+                    break;
+                    case "FelipeLamparas":
+                        porcentaje = 10;
+                    break;
+                    default:
+                        porcentaje = 5;
+                    break;
+                }
+            break;
+            case 4:
+                switch(fabricante)
+                {
+                    case "ArgentinaLuz":
+                    case "FelipeLamparas":
+                        porcentaje = 25;
+                    break;
+                    default:
+                        porcentaje = 20;
+                    break;
+                }
+            break;
+            case 5:
+                switch(fabricante) 
+                {
+                    case "ArgentinaLuz":
+                        porcentaje = 40;
+                    break;
+                    default:
+                        porcentaje = 30;
+                    break;
+                }
+            break;
+            default: 
+                porcentaje = 50;
+            break;
+        }
+    
+        precioTotal = cantidadLampara * 35;
+        calculoProcentaje = precioTotal * porcentaje /100 ;
+        descuento = precioTotal - calculoProcentaje; 
+    
+        if (descuento > 120)
+        {
+            aumento = descuento *10 /100;
+            descuento = descuento + aumento;
+    
+            alert("Usted pago 10% de IIBB, siendo " +  aumento + "$ el impuesto que se pagó"); 
+        }
+    
+        document.getElementById("txtIdprecioDescuento").value = descuento; */
+
+
+    
+    
+    
+    
+    
+    /* if(cantidadLamp > 5) //A
+    {
+        porcentaje = 50;   
         
     }
     else
     {
-        if(CantidadLamp == 5 ) //B
+        if(cantidadLamp == 5 ) //B
         {
-            if(Fabricante == "ArgentinaLuz")
+            if(fabricante == "ArgentinaLuz")
             {
-                Porcentaje = 40;
+                porcentaje = 40;
             }
             else
             {
-                Porcentaje = 30;
+                porcentaje = 30;
             }
             
 
         }
         else
         {
-            if(CantidadLamp == 4) //C
+            if(cantidadLamp == 4) //C
             {
-                if(Fabricante =="ArgentinaLuz" || Fabricante == "FelipeLamparas")
+                if(fabricante =="ArgentinaLuz" || fabricante == "FelipeLamparas")
                 {
-                    Porcentaje = 25;
+                    porcentaje = 25;
                 }
                 else
                 {
-                    Porcentaje = 20;
+                    porcentaje = 20;
                 }
             }
             else
             {
-                if(CantidadLamp == 3) //D
+                if(cantidadLamp == 3) //D
                 {
-                    if(Fabricante =="ArgentinaLuz" )
+                    if(fabricante =="ArgentinaLuz" )
                     {
-                        Porcentaje = 15;
+                        porcentaje = 15;
                     }
                     else
                     {
-                        if(Fabricante == "FelipeLamparas")
+                        if(fabricante == "FelipeLamparas")
                         {
-                            Porcentaje = 10;
+                            porcentaje = 10;
                         }
                         else
                         {
-                            Porcentaje = 5;
+                            porcentaje = 5;
                         }
                     }
                     
@@ -91,19 +310,18 @@ function CalcularPrecio ()
 
     }
 
+    precioTotal = cantidadLamp * 35;
+    calculoProcentaje = precioTotal * porcentaje /100 ;
+    descuento = precioTotal - calculoProcentaje;
     
-    CalculoProcentaje = PrecioTotal * Porcentaje /100 ;
-    Descuento = PrecioTotal - CalculoProcentaje;
-    
-    if(Descuento > 120) //E
+    if(descuento > 120) //E
     {
-        Aumento = Descuento *10 /100;
-        Descuento = Descuento + Aumento;
+        aumento = descuento *10 /100;
+        descuento = descuento + aumento;
 
-        alert("Usted pago 10% de IIBB, siendo " +  Aumento + "$ el impuesto que se pagó");
+        alert("Usted pago 10% de IIBB, siendo " +  aumento + "$ el impuesto que se pagó");
         
     }
-
-    document.getElementById("txtIdprecioDescuento").value = Descuento;
-   
-}
+    
+       document.getElementById("txtIdprecioDescuento").value = descuento;
+   */
